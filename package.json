@@ -1,0 +1,20 @@
+{
+  "name": "newsify",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000 --open",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "sass": "^1.83.1",
+    "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "flatpickr": "^4.6.13"
+  }
+}

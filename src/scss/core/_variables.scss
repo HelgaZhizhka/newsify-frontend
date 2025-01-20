@@ -1,0 +1,50 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --red: #ff3a44;
+  --yellow: #ffe600;
+  --green: #2cc069;
+  --orange: #fda77f;
+  --blue: #0080ff;
+
+  --dark: #192a3e;
+  --grey: #747474;
+  --light-grey: #f0f1fa;
+  --light: #f7f7fc;
+
+  --body-bg: var(--white);
+  --header-bg: var(--white);
+  --color-text: var(--dark);
+  --color-primary: var(--red);
+  --color-heading: #121212;
+  --color-link: var(--color-primary);
+  --color-link-hover: #bf0d17;
+  --color-disabled: var(--grey);
+  --color-error: var(--red);
+  --color-success: var(--green);
+  --color-warning: var(--yellow);
+
+  --border-radius: 16px;
+  --transition-duration: .25s;
+  --transition-easing: cubic-bezier(0.5, 0, 0.5, 1);
+
+  --font-family-base: 'Source Sans 3', 'Arial', 'Helvetica';
+  --font-family-heading: 'Merriweather', 'Georgia', 'Times New Roman';
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --line-height-base: 1.4;
+  --font-weight-normal: 400;
+
+  --z-index-content: 1;
+  --z-index-header: 50;
+  --z-index-loader: 40;
+}
+
+[data-theme='dark'] {
+  --body-bg: #1f161e;
+  --header-bg: var(--dark);
+  --color-text: var(--light);
+  --color-heading: var(--light);
+  --color-link-hover: #f2f2f2;
+  --color-primary: var(--red);
+}

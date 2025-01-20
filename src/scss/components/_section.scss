@@ -1,0 +1,29 @@
+.section {
+  &__title {
+    margin: 0 0 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__footer {
+    margin-top: 24px;
+    text-align: center;
+  }
+
+  &__content {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  &_latest {
+    padding-top: 30px;
+  }
+
+  &_results {
+    position: relative;
+
+    .gallery {
+      padding-top: 30px;
+    }
+  }
+}

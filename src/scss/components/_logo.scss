@@ -1,0 +1,48 @@
+.logo {
+  text-decoration: none;
+  color: var(--color-text);
+  display: flex;
+  gap: 5px;
+
+  &__title,
+  &__subtitle {
+    display: block;
+  }
+
+  &__icon {
+    color: var(--color-primary);
+  }
+
+  &__title {
+    font-family: var(--font-family-heading), serif;
+    font-weight: 700;
+    box-shadow: inset 0 0 0 0 var(--color-primary);
+    color: var(--color-primary);
+    margin: 0 -0.25rem;
+    padding: 0 0.25rem;
+    transition:
+      color 0.3s ease-in-out,
+      box-shadow 0.3s ease-in-out;
+  }
+
+  &__subtitle {
+    font-size: 0.75rem;
+  }
+
+  &:hover {
+    .logo__subtitle {
+      color: var(--color-text);
+    }
+
+    .logo__title {
+      box-shadow: inset 100px 0 0 0 var(--color-primary);
+      color: var(--white);
+    }
+  }
+
+  @media (max-width: 539px) {
+    .logo__body {
+        display: none;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.footer {
+  text-align: center;
+  background: var(--dark);
+  color: var(--light);
+
+  &__copyright {
+    font-size: var(--font-size-sm);
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: var(--light);
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}

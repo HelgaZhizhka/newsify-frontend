@@ -1,0 +1,45 @@
+.custom-radio {
+  position: absolute;
+  opacity: 0;
+
+  & + .label {
+    user-select: none;
+    cursor: pointer;
+    display: inline-block;
+    height: 32px;
+    padding: 0 1rem;
+    line-height: 30px;
+    vertical-align: middle;
+    font-weight: 500;
+    font-family: var(--font-family-base), sans-serif;
+    border-radius: var(--border-radius);
+    transition: background-color 0.35s ease-in-out;
+  }
+
+  &:not(:checked) {
+
+    & + .label {
+      background-color: transparent;
+      color: var(--color-text);
+      border: 1px solid var(--color-text);
+    }
+  }
+
+  &:checked,
+  &:hover:not(:disabled),
+  &:hover:not(.disabled) {
+    & + .label {
+      background-color: var(--color-primary);
+      color: var(--white);
+      border: 1px solid var(--color-primary);
+    }
+  }
+
+  &:disabled,
+  &.disabled {
+    & + .label {
+      pointer-events: none;
+      opacity: 0.56;
+    }
+  }
+}

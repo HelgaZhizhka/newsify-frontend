@@ -1,0 +1,5 @@
+@use '../abstracts/mixins' as *;
+
+.menu {
+  @include reset-list-style;
+}

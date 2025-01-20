@@ -1,0 +1,84 @@
+.button {
+  border: 0;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.56;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &_sm {
+    height: 32px;
+    padding: 0 1rem;
+    line-height: 30px;
+  }
+
+  &_primary {
+    background-color: var(--color-primary);
+    font-weight: 500;
+    font-family: var(--font-family-base), sans-serif;
+    color: var(--white);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--border-radius);
+    transition: background-color 0.35s ease-in-out;
+
+    &:hover {
+      background-color: transparent;
+      border-color: var(--color-text);
+      color: var(--color-text);
+    }
+  }
+
+  &_bordered {
+    background-color: transparent;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    font-family: var(--font-family-base), sans-serif;
+    transition: background-color 0.35s ease-in-out;
+    border: 1px solid var(--color-text);
+    color: var(--color-text);
+
+    &:hover,
+    &.active {
+      border-radius: var(--border-radius);
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: var(--white);
+    }
+  }
+
+  &_icon,
+  &_loader {
+    line-height: 1;
+    font-size: 0;
+  }
+
+  &_loader {
+    color: var(--color-primary);
+
+    .button__icon {
+      animation: spin 1.5s linear infinite;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

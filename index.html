@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Newsify" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Newsify — Stay Informed with the Latest Global Events 24/7 | Powerful Search and Filters
+    </title>
+    <meta
+      name="description"
+      content="Newsify is a powerful news search engine that allows you to find the latest news from around the world. Stay informed with the latest global events 24/7." />
+    <meta
+      name="keywords"
+      content="news, search, engine, latest, global, events, 24/7, stay, informed, real-time updates, news search platform" />
+    <!--  Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Merriweather:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+    <!-- Svg sprite -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="icon-datepicker" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M9 1v2h6V1h2v2h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1zm11 10H4v8h16zM8 13v2H6v-2zm5 0v2h-2v-2zm5 0v2h-2v-2zM7 5H4v4h16V5h-3v2h-2V5H9v2H7z" />
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="m12 10.587 4.95-4.95 1.415 1.414-4.95 4.95 4.95 4.95-1.415 1.414-4.95-4.95-4.95 4.95-1.413-1.415 4.95-4.95-4.95-4.95L7.05 5.638z" />
+      </symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 12 12">
+        <path
+          fill="currentColor"
+          d="M0 5.5c0-.276.205-.504.471-.54l.074-.006h9.589L6.67 1.506a.545.545 0 0 1 .708-.826l.062.053 4.4 4.381a.6.6 0 0 1 .073.09l.017.03a.3.3 0 0 1 .032.067.4.4 0 0 1 .023.073.4.4 0 0 1 .012.072L12 5.5v.021l-.002.032L12 5.5a.55.55 0 0 1-.107.325l-.005.006a1 1 0 0 1-.048.055l-4.4 4.382a.545.545 0 0 1-.823-.712l.053-.061 3.462-3.45H.545A.545.545 0 0 1 0 5.5" />
+      </symbol>
+      <symbol id="icon-edit" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="m15.728 9.576-1.414-1.414L5 17.476v1.414h1.414zm1.414-1.414 1.414-1.414-1.414-1.414-1.414 1.414zm-9.9 12.728H3v-4.243L16.435 3.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414z" />
+      </symbol>
+      <symbol id="icon-moon" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.98 6.98 0 0 0 10 7m-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 8 8 0 0 0 4 12" />
+      </symbol>
+      <symbol id="icon-sun" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12M11 1h2v3h-2zm0 19h2v3h-2zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414zm2.121-14.85 1.414 1.415-2.121 2.121-1.414-1.414zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414zM23 11v2h-3v-2zM4 11v2H1v-2z" />
+      </symbol>
+      <symbol id="icon-earth" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M6.235 6.453a8 8 0 0 0 8.817 12.944c.115-.75-.137-1.47-.24-1.722-.23-.56-.988-1.517-2.253-2.844-.338-.355-.316-.627-.195-1.437l.013-.091c.082-.554.22-.882 2.085-1.178.948-.15 1.197.228 1.542.753l.116.172c.328.48.571.59.938.756.165.075.37.17.645.325.652.373.652.794.652 1.716v.105c0 .391-.038.735-.098 1.034a8.002 8.002 0 0 0-3.105-12.341c-.553.373-1.312.902-1.577 1.265-.135.185-.327 1.132-.95 1.21-.162.02-.381.006-.613-.009-.622-.04-1.472-.095-1.744.644-.173.468-.203 1.74.356 2.4.09.105.107.3.046.519-.08.287-.241.462-.292.498-.096-.056-.288-.279-.419-.43-.313-.366-.705-.82-1.211-.96-.184-.051-.386-.093-.583-.135-.549-.115-1.17-.246-1.315-.554-.106-.226-.105-.537-.105-.865 0-.417 0-.888-.204-1.345a1.3 1.3 0 0 0-.306-.43M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10" />
+      </symbol>
+      <symbol id="icon-github" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M12.001 2c-5.525 0-10 4.475-10 10a9.99 9.99 0 0 0 6.837 9.488c.5.087.688-.213.688-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.337 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.687-.1-.25-.45-1.275.1-2.65 0 0 .837-.263 2.75 1.024a9.3 9.3 0 0 1 2.5-.337c.85 0 1.7.112 2.5.337 1.913-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.02 10.02 0 0 0 22 12c0-5.525-4.475-10-10-10" />
+      </symbol>
+      <symbol id="icon-loader" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M12 2a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1m0 15a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0v-3a1 1 0 0 1 1-1m10-5a1 1 0 0 1-1 1h-3a1 1 0 1 1 0-2h3a1 1 0 0 1 1 1M7 12a1 1 0 0 1-1 1H3a1 1 0 1 1 0-2h3a1 1 0 0 1 1 1m12.071 7.071a1 1 0 0 1-1.414 0l-2.121-2.121a1 1 0 0 1 1.414-1.414l2.121 2.12a1 1 0 0 1 0 1.415M8.464 8.464a1 1 0 0 1-1.414 0L4.93 6.344a1 1 0 0 1 1.414-1.415L8.464 7.05a1 1 0 0 1 0 1.414M4.93 19.071a1 1 0 0 1 0-1.414l2.121-2.121a1 1 0 0 1 1.414 1.414l-2.12 2.121a1 1 0 0 1-1.415 0M15.536 8.464a1 1 0 0 1 0-1.414l2.12-2.121a1 1 0 1 1 1.415 1.414L16.95 8.464a1 1 0 0 1-1.414 0" />
+      </symbol>
+      <symbol id="icon-map" viewBox="0 0 24 24">
+        <path fill="currentColor" d="m2 5 7-3 6 3 6.303-2.701a.5.5 0 0 1 .697.46V19l-7 3-6-3-6.303 2.701a.5.5 0 0 1-.697-.46zm12.935 2.204-6-3L4 6.319v12.648l5.065-2.17 6 3L20 17.68V5.033z"/>
+      </symbol>
+    </svg>
+  </head>
+  <body>
+    <main class="main">
+      <header class="header">
+        <a href="/" class="logo" data-link>
+          <svg class="logo__icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <use href="#icon-earth"></use>
+          </svg>
+          <span class="logo__body">
+            <span class="logo__title">Newsify</span>
+            <span class="logo__subtitle">stay informed</span>
+          </span>
+        </a>
+        <nav class="nav header__nav">
+          <ul class="nav__menu">
+            <li class="nav__item"><a class="nav__link" href="/index.html" data-link>Home</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="/top-headlines.html" data-link>Top Headlines</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="/about.html" data-link>About</a></li>
+          </ul>
+        </nav>
+        <div class="theme-switch">
+          <input class="theme-switch__input" type="checkbox" id="themeToggle" />
+          <label for="themeToggle" class="theme-switch__label">
+            <svg
+              class="theme-switch__icon theme-switch__icon_sun"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg">
+              <use href="#icon-sun"></use>
+            </svg>
+            <svg
+              class="theme-switch__icon theme-switch__icon_moon"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg">
+              <use href="#icon-moon"></use>
+            </svg>
+          </label>
+        </div>
+      </header>
+      <section class="page">
+        <div class="container">
+          <h1 class="page__title">Search, <span class="text-primary">Find</span> & Read</h1>
+          <h2 class="page__subtitle">
+            Easily search for the latest news by date and keywords. Stay informed with personalized
+            updates, sorted by popularity, and never miss the stories that matter most.
+          </h2>
+          <div class="search">
+            <form action="" id="search-form" aria-label="Search news" role="search">
+              <div  class="search__form form">
+                <div class="form__row">
+                  <label for="search-input" class="visually-hidden">Title or keyword</label>
+                  <svg class="form__addon form__addon_left" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                    <use href="#icon-edit"></use>
+                  </svg>
+                  <input
+                    class="search__input input input_addon"
+                    type="search"
+                    name="q"
+                    id="search-input"
+                    placeholder="Title or keyword"
+                    aria-label="Search"
+                    list="suggestions"
+                    autocomplete="off" />
+                  <datalist class="search__datalist" id="suggestions" role="listbox">
+                    <option value="Mac book Pro"></option>
+                    <option value="War"></option>
+                    <option value="Forest"></option>
+                    <option value="Dark time"></option>
+                    <option value="Iphone 16 Pro Max"></option>
+                  </datalist>
+                </div>
+                <div class="form__row">
+                  <svg class="form__addon form__addon_left" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                    <use href="#icon-datepicker"></use>
+                  </svg>
+                  <label for="datepicker" class="visually-hidden">Date</label>
+                  <input class="search__input input input_addon" type="date" name="date" id="datepicker" placeholder="Date" />
+                  <button class="button button_icon form__addon form__addon_right" id="reset-datepicker">
+                    <svg class="button__icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <button class="button button_sm button_primary" type="submit">Search</button>
+              </div>
+              <span class="search__form-error" id="search-form-error"></span>
+              <div class="search__footer">
+                <label for="all">
+                  <input class="custom-radio" type="radio" name="sortBy" id="all" value="all" checked />
+                  <span class="label">All</span>
+                </label>
+                <label for="popular">
+                  <input class="custom-radio" type="radio" name="sortBy" id="popular" value="popular"/>
+                  <span class="label">Popular</span>
+                </label>
+                <label for="relevancy">
+                  <input class="custom-radio" type="radio" name="sortBy" id="relevancy" value="relevancy"/>
+                  <span class="label">Relevancy</span>
+                </label>
+                <label for="newest">
+                  <input class="custom-radio" type="radio" name="sortBy" id="newest" value="newest" />
+                  <span class="label">Newest</span>
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="section section_results" id="results">
+            <div class="gallery gallery_results" style="display: none">
+              <div class="card">
+                <div class="card__image">
+                  <img class="image" src="/assets/images/img1.jpg" alt="" />
+                </div>
+                <div class="card__body">
+                  <span class="card__date">
+                    <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-datepicker"></use>
+                    </svg>
+                    24 Oct, 2024
+                  </span>
+                  <h4 class="card__title">Hymn to the United Nations</h4>
+                  <p class="card__description">
+                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let music
+                    for peace Be the paradigm, For peace means to change At the right time...
+                  </p>
+                  <div class="card__footer">
+                    <button class="card__link button button_link">
+                      <span>Read more</span>
+                      <svg class="icon" width="16" height="16">
+                        <use href="#icon-arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__image">
+                  <img class="image" src="/assets/images/img1.jpg" alt="" />
+                </div>
+                <div class="card__body">
+                  <span class="card__date">
+                    <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-datepicker"></use>
+                    </svg>
+                    24 Oct, 2024
+                  </span>
+                  <h4 class="card__title">Hymn to the United Nations</h4>
+                  <p class="card__description">
+                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let music
+                    for peace Be the paradigm, For peace means to change At the right time...
+                  </p>
+                  <div class="card__footer">
+                    <button class="card__link button button_link">
+                      <span>Read more</span>
+                      <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__image">
+                  <img class="image" src="/assets/images/img1.jpg" alt="" />
+                </div>
+                <div class="card__body">
+                  <span class="card__date">
+                    <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-datepicker"></use>
+                    </svg>
+                    24 Oct, 2024
+                  </span>
+                  <h4 class="card__title">Hymn to the United Nations</h4>
+                  <p class="card__description">
+                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let music
+                    for peace Be the paradigm, For peace means to change At the right time...
+                  </p>
+                  <div class="card__footer">
+                    <button class="card__link button button_link">
+                      <span>Read more</span>
+                      <svg class="icon" width="16" height="16">
+                        <use href="#icon-arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__image">
+                  <img class="image" src="/assets/images/img1.jpg" alt="" />
+                </div>
+                <div class="card__body">
+                  <span class="card__date">
+                    <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-datepicker"></use>
+                    </svg>
+                    24 Oct, 2024
+                  </span>
+                  <h4 class="card__title">Hymn to the United Nations</h4>
+                  <p class="card__description">
+                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let music
+                    for peace Be the paradigm, For peace means to change At the right time...
+                  </p>
+                  <div class="card__footer">
+                    <button class="card__link button button_link">
+                      <span>Read more</span>
+                      <svg class="icon" width="16" height="16">
+                        <use href="#icon-arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__image">
+                  <img class="image" src="/assets/images/img1.jpg" alt="" />
+                </div>
+                <div class="card__body">
+                  <span class="card__date">
+                    <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-datepicker"></use>
+                    </svg>
+                    24 Oct, 2024
+                  </span>
+                  <h4 class="card__title">Hymn to the United Nations</h4>
+                  <p class="card__description">
+                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let music
+                    for peace Be the paradigm, For peace means to change At the right time...
+                  </p>
+                  <div class="card__footer">
+                    <button class="card__link button button_link">
+                      <span>Read more</span>
+                      <svg class="icon" width="16" height="16">
+                        <use href="#icon-arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__image">
+                  <img class="image" src="/assets/images/img1.jpg" alt="" />
+                </div>
+                <div class="card__body">
+                  <span class="card__date">
+                    <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-datepicker"></use>
+                    </svg>
+                    24 Oct, 2024
+                  </span>
+                  <h4 class="card__title">Hymn to the United Nations</h4>
+                  <p class="card__description">
+                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let music
+                    for peace Be the paradigm, For peace means to change At the right time...
+                  </p>
+                  <div class="card__footer">
+                    <button class="card__link button button_link">
+                      <span>Read more</span>
+                      <svg class="icon" width="16" height="16">
+                        <use href="#icon-arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__image">
+                  <img class="image" src="/assets/images/img1.jpg" alt="" />
+                </div>
+                <div class="card__body">
+                  <span class="card__date">
+                    <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-datepicker"></use>
+                    </svg>
+                    24 Oct, 2024
+                  </span>
+                  <h4 class="card__title">Hymn to the United Nations</h4>
+                  <p class="card__description">
+                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let music
+                    for peace Be the paradigm, For peace means to change At the right time...
+                  </p>
+                  <div class="card__footer">
+                    <button class="card__link button button_link">
+                      <span>Read more</span>
+                      <svg class="icon" width="16" height="16">
+                        <use href="#icon-arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__image">
+                  <img class="image" src="/assets/images/img1.jpg" alt="" />
+                </div>
+                <div class="card__body">
+                  <span class="card__date">
+                    <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-datepicker"></use>
+                    </svg>
+                    24 Oct, 2024
+                  </span>
+                  <h4 class="card__title">Hymn to the United Nations</h4>
+                  <p class="card__description">
+                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let music
+                    for peace Be the paradigm, For peace means to change At the right time...
+                  </p>
+                  <div class="card__footer">
+                    <button class="card__link button button_link">
+                      <span>Read more</span>
+                      <svg class="icon" width="16" height="16">
+                        <use href="#icon-arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section__footer" style="display: none">
+              <button class="button button_loader">
+                <svg class="button__icon" width="52" height="52" xmlns="http://www.w3.org/2000/svg">
+                  <use href="#icon-loader"></use>
+                </svg>
+              </button>
+              <!--              <button class="button button_sm button_bordered">Load more</button>-->
+            </div>
+          </div>
+          <div class="section section_latest" id="latest">
+            <h3 class="section__title">Latest News</h3>
+            <div class="gallery gallery_latest">
+              <div class="card">
+                <div class="card__image">
+                  <img class="image" src="/assets/images/img1.jpg" alt="" />
+                </div>
+                <div class="card__body">
+                    <span class="card__date">
+                      <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-datepicker"></use>
+                      </svg>
+                      24 Oct, 2024
+                    </span>
+                  <h4 class="card__title">Hymn to the United Nations</h4>
+                  <p class="card__description">
+                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let
+                    music for peace Be the paradigm, For peace means to change At the right
+                    time...
+                  </p>
+                  <div class="card__footer">
+                    <button class="card__link button button_link">
+                      <span>Read more</span>
+                      <svg class="icon" width="16" height="16">
+                        <use href="#icon-arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__image">
+                  <img class="image" src="/assets/images/img1.jpg" alt="" />
+                </div>
+                <div class="card__body">
+                    <span class="card__date">
+                      <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-datepicker"></use>
+                      </svg>
+                      24 Oct, 2024
+                    </span>
+                  <h4 class="card__title">Hymn to the United Nations</h4>
+                  <p class="card__description">
+                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let
+                    music for peace Be the paradigm, For peace means to change At the right
+                    time...
+                  </p>
+                  <div class="card__footer">
+                    <button class="card__link button button_link">
+                      <span>Read more</span>
+                      <svg class="icon" width="16" height="16">
+                        <use href="#icon-arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__image">
+                  <img class="image" src="/assets/images/img1.jpg" alt="" />
+                </div>
+                <div class="card__body">
+                    <span class="card__date">
+                      <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-datepicker"></use>
+                      </svg>
+                      24 Oct, 2024
+                    </span>
+                  <h4 class="card__title">Hymn to the United Nations</h4>
+                  <p class="card__description">
+                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let
+                    music for peace Be the paradigm, For peace means to change At the right
+                    time...
+                  </p>
+                  <div class="card__footer">
+                    <button class="card__link button button_link">
+                      <span>Read more</span>
+                      <svg class="icon" width="16" height="16">
+                        <use href="#icon-arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__image">
+                  <img class="image" src="/assets/images/img1.jpg" alt="" />
+                </div>
+                <div class="card__body">
+                    <span class="card__date">
+                      <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-datepicker"></use>
+                      </svg>
+                      24 Oct, 2024
+                    </span>
+                  <h4 class="card__title">Hymn to the United Nations</h4>
+                  <p class="card__description">
+                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let
+                    music for peace Be the paradigm, For peace means to change At the right
+                    time...
+                  </p>
+                  <div class="card__footer">
+                    <button class="card__link button button_link">
+                      <span>Read more</span>
+                      <svg class="icon" width="16" height="16">
+                        <use href="#icon-arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <p class="footer__copyright">
+          Made with ❤️ by
+          <a class="footer__link" rel="noopener noreferrer" href="https://github.com/mmishoil/Newsify" target="_blank"
+            ><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+              <use href="#icon-github"></use></svg
+            >Misha Zhyzhka</a
+          >
+        </p>
+      </footer>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
