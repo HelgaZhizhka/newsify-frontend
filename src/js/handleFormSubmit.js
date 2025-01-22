@@ -9,7 +9,7 @@ const handleFormSubmit = (form, callback, onSuccess = null) => {
     const formData = new FormData(form);
     const params = Object.fromEntries(formData.entries());
 
-    if (form.id === 'search-headlines') {
+    if (form.name === 'searchTopHeadlinesForm') {
       const keyword = params.q && params.q.trim();
       const country = params.country && params.country.trim();
 
@@ -18,7 +18,7 @@ const handleFormSubmit = (form, callback, onSuccess = null) => {
         return
       }
 
-    } else if (form.id === 'search-form') {
+    } else if (form.name === 'searchForm') {
       const keyword = params.q && params.q.trim();
       const date = params.date && params.date.trim();
 
@@ -27,13 +27,14 @@ const handleFormSubmit = (form, callback, onSuccess = null) => {
         return;
       }
 
-      const [startDate, endDate] = params.date.split(' to ');
-      params.from = startDate;
-      params.to = endDate ?? '';
+      if (date) {
+        const [startDate, endDate] = date.split(' to ');
+        params.from = startDate;
+        params.to = endDate ?? '';
+      }
+
       delete params.date;
     }
-
-    const country = params.country && params.country.trim();
 
     if (submitButton) submitButton.disabled = true;
 

@@ -132,7 +132,7 @@
             updates, sorted by popularity, and never miss the stories that matter most.
           </h2>
           <div class="search">
-            <form action="" id="search-form" aria-label="Search news" role="search">
+            <form action="" name="searchForm" id="search-form" aria-label="Search news" role="search">
               <div  class="search__form form">
                 <div class="form__row">
                   <label for="search-input" class="visually-hidden">Title or keyword</label>
@@ -162,7 +162,7 @@
                   </svg>
                   <label for="datepicker" class="visually-hidden">Date</label>
                   <input class="search__input input input_addon" type="date" name="date" id="datepicker" placeholder="Date" />
-                  <button class="button button_icon form__addon form__addon_right" id="reset-datepicker">
+                  <button class="button button_icon form__addon form__addon_right" id="button-reset">
                     <svg class="button__icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
                       <use href="#icon-close"></use>
                     </svg>
@@ -538,5 +538,6 @@
       </footer>
     </main>
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/index.js"></script>
   </body>
 </html>

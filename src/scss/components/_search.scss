@@ -12,6 +12,12 @@
       background-color: var(--header-bg);
       border-radius: var(--border-radius);
       text-align: inherit;
+
+      .form__row {
+        &:first-of-type  {
+          border-right: 1px solid var(--light-grey);
+        }
+      }
     }
   }
 
