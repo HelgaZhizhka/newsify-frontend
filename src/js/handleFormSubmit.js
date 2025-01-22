@@ -41,10 +41,10 @@ const handleFormSubmit = (form, callback, onSuccess = null) => {
     console.log('Form submission params:', params);
 
     try {
-      // const result = await callback(params);
+      const result = await callback(params);
       if (submitButton) submitButton.disabled = false;
-      // if (onSuccess) onSuccess(result);
-      // console.log('Form submission result:', result);
+      if (onSuccess) onSuccess(result);
+      console.log('Form submission result:', result);
       errorTextElement.textContent = '';
     } catch (error) {
       console.error('Error:', error);

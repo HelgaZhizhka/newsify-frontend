@@ -1,7 +1,7 @@
 import './scss/app.scss'
 import themeToggle from './js/theme.js'
 import handleFormSubmit from './js/handleFormSubmit.js'
-import { searchByCategory } from './js/api.js'
+import { fetchSearchForm } from './js/api.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('search-form');
@@ -16,20 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!form) return;
 
-  handleFormSubmit(form, async (params) => {
-    showLoader();
-    return await searchByCategory(params);
-  }, (result) => console.log(result));
+  handleFormSubmit(form, fetchSearchForm);
 
   if (radioButtons.length === 0) return;
 
   radioButtons.forEach(radio => {
     radio.addEventListener('change', () => {
       if (radio.checked) {
-        if (radio.checked) {
           form.dispatchEvent(new Event('submit', { cancelable: true }));
         }
-      }
     });
   });
 })
