@@ -1,7 +1,8 @@
 import './scss/app.scss'
 import themeToggle from './js/theme.js'
 import handleFormSubmit from './js/handleFormSubmit.js'
-import { fetchSearchForm } from './js/api.js'
+import { fetchSearchForm, fetchSearchHeadlinesForm } from './js/api.js'
+import renderResults from './js/renderResults.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('search-form');
@@ -16,7 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!form) return;
 
-  handleFormSubmit(form, fetchSearchForm);
+  if (form.name === 'searchForm') {
+    handleFormSubmit(form, fetchSearchForm, renderResults);
+  } else if (form.name === 'searchTopHeadlinesForm') {
+    handleFormSubmit(form, fetchSearchHeadlinesForm, renderResults);
+  }
 
   if (radioButtons.length === 0) return;
 
