@@ -1,9 +1,7 @@
-const handleFormSubmit = (form, callback, onSuccess = null) => {
-  form.addEventListener('submit', async event => {
-    event.preventDefault();
-
-    if (!form) return;
-
+const handleFormSubmit = async (form, callback, onSuccess = null, page = 1) => {
+    let articles = [];
+    const limit = 9;
+    let totalResults = null;
     const submitButton = form.querySelector('[type="submit"]');
     const errorTextElement = form.querySelector('#search-form-error');
     const formData = new FormData(form);
@@ -35,13 +33,21 @@ const handleFormSubmit = (form, callback, onSuccess = null) => {
 
       delete params.date;
     }
+    params.page = page;
 
     if (submitButton) submitButton.disabled = true;
 
     console.log('Form submission params:', params);
 
+    // пункт 1: пропускаем проверки и делаем запрос
+    // иначе -> провверяем
+    // если totalResults = aricles.length -> return
+    // когда очистить эти данные???
+
     try {
       const result = await callback(params);
+      articles.push(result.articles);
+      totalResults = result.totalResults;
       if (submitButton) submitButton.disabled = false;
       if (onSuccess) onSuccess(result);
       console.log('Form submission result:', result);
@@ -51,7 +57,6 @@ const handleFormSubmit = (form, callback, onSuccess = null) => {
       if (submitButton) submitButton.disabled = false;
       errorTextElement.textContent = 'An error occurred. Please try again.';
     }
-  });
 }
 
 export default handleFormSubmit
