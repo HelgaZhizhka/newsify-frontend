@@ -41,3 +41,7 @@ const apiFetch = async (endpoint, method = 'GET', data = null) => {
 export const fetchSearchForm = (params) => {
   return apiFetch('/submit-form/', 'POST', params);
 }
+
+export const fetchSearchHeadlinesForm = (params) => {
+  return apiFetch('/submit-form-headlines/', 'POST', params);
+}
