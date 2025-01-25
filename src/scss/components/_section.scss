@@ -35,12 +35,13 @@
   &_article {
     line-height: 1.66;
 
-    ul, ol {
+    ul,
+    ol {
       padding-left: 20px;
     }
 
     @media (min-width: 1024px) {
-      font-size: 1.25rem ;
+      font-size: 1.25rem;
     }
   }
 }

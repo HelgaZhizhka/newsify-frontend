@@ -13,7 +13,7 @@
       text-align: inherit;
 
       .form__row {
-        &:first-of-type  {
+        &:first-of-type {
           border-right: 1px solid var(--light-grey);
         }
       }
@@ -33,7 +33,7 @@
     display: block;
     height: 25px;
     color: var(--color-error);
-    font-size: .875rem;
+    font-size: 0.875rem;
     text-align: center;
   }
 

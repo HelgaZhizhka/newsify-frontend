@@ -1,13 +1,13 @@
 export default {
   build: {
-    outDir: "dist",
+    outDir: 'dist',
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        index: "index.html",
-        about: "about.html",
+        index: 'index.html',
+        about: 'about.html',
         headlines: 'top-headlines.html',
       },
     },
   },
-};
+}

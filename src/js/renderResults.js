@@ -1,15 +1,17 @@
-const renderResults = (result) => {
-  const resultsContainer = document.querySelector('#results');
-  const gallery = resultsContainer.querySelector('.gallery');
-  const {articles, page} = result;
+const renderResults = result => {
+  const resultsContainer = document.querySelector('#results')
+  const gallery = resultsContainer.querySelector('.gallery')
+  const { articles, page } = result
 
-  if(page === 1) {
-    gallery.innerHTML = '';
+  if (page === 1) {
+    gallery.innerHTML = ''
   }
 
   if (articles && articles.length > 0) {
-    const cards = articles.map(article =>
-      `<div class="card">
+    const cards = articles
+      .map(
+        article =>
+          `<div class="card">
         <div class="card__image">
           <img class="image" src="${article.urlToImage}" alt="" />
         </div>
@@ -33,17 +35,17 @@ const renderResults = (result) => {
             </a>
           </div>
         </div>
-      </div>`
-      ).join('');
+      </div>`,
+      )
+      .join('')
 
-      gallery.insertAdjacentHTML("beforeend", cards);
-
+    gallery.insertAdjacentHTML('beforeend', cards)
   } else {
-    const noResultsMessage = document.createElement('h2');
-    noResultsMessage.className = 'section__title';
-    noResultsMessage.textContent = 'No results found.';
-    resultsContainer.appendChild(noResultsMessage);
+    const noResultsMessage = document.createElement('h2')
+    noResultsMessage.className = 'section__title'
+    noResultsMessage.textContent = 'No results found.'
+    resultsContainer.appendChild(noResultsMessage)
   }
-};
+}
 
-export default renderResults;
+export default renderResults

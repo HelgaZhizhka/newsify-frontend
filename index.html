@@ -23,13 +23,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
 
     <!-- Preload Google Fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Merriweather:wght@400;500;700&display=swap" as="style" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Merriweather:wght@400;500;700&display=swap"
+      as="style" />
 
     <!-- Normal Link to Google Fonts (non-blocking) -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Merriweather:wght@400;500;700&display=swap" media="print" onload="this.media='all'" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Merriweather:wght@400;500;700&display=swap"
+      media="print"
+      onload="this.media='all'" />
 
     <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Merriweather:wght@400;500;700&display=swap" />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Merriweather:wght@400;500;700&display=swap" />
     </noscript>
     <!-- Svg sprite -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
@@ -79,7 +88,9 @@
           d="M12 2a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1m0 15a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0v-3a1 1 0 0 1 1-1m10-5a1 1 0 0 1-1 1h-3a1 1 0 1 1 0-2h3a1 1 0 0 1 1 1M7 12a1 1 0 0 1-1 1H3a1 1 0 1 1 0-2h3a1 1 0 0 1 1 1m12.071 7.071a1 1 0 0 1-1.414 0l-2.121-2.121a1 1 0 0 1 1.414-1.414l2.121 2.12a1 1 0 0 1 0 1.415M8.464 8.464a1 1 0 0 1-1.414 0L4.93 6.344a1 1 0 0 1 1.414-1.415L8.464 7.05a1 1 0 0 1 0 1.414M4.93 19.071a1 1 0 0 1 0-1.414l2.121-2.121a1 1 0 0 1 1.414 1.414l-2.12 2.121a1 1 0 0 1-1.415 0M15.536 8.464a1 1 0 0 1 0-1.414l2.12-2.121a1 1 0 1 1 1.415 1.414L16.95 8.464a1 1 0 0 1-1.414 0" />
       </symbol>
       <symbol id="icon-map" viewBox="0 0 24 24">
-        <path fill="currentColor" d="m2 5 7-3 6 3 6.303-2.701a.5.5 0 0 1 .697.46V19l-7 3-6-3-6.303 2.701a.5.5 0 0 1-.697-.46zm12.935 2.204-6-3L4 6.319v12.648l5.065-2.17 6 3L20 17.68V5.033z"/>
+        <path
+          fill="currentColor"
+          d="m2 5 7-3 6 3 6.303-2.701a.5.5 0 0 1 .697.46V19l-7 3-6-3-6.303 2.701a.5.5 0 0 1-.697-.46zm12.935 2.204-6-3L4 6.319v12.648l5.065-2.17 6 3L20 17.68V5.033z" />
       </symbol>
     </svg>
   </head>
@@ -132,11 +143,20 @@
             updates, sorted by popularity, and never miss the stories that matter most.
           </h2>
           <div class="search">
-            <form action="" name="searchForm" id="search-form" aria-label="Search news" role="search">
-              <div  class="search__form form">
+            <form
+              action=""
+              name="searchForm"
+              id="search-form"
+              aria-label="Search news"
+              role="search">
+              <div class="search__form form">
                 <div class="form__row">
                   <label for="search-input" class="visually-hidden">Title or keyword</label>
-                  <svg class="form__addon form__addon_left" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    class="form__addon form__addon_left"
+                    width="24"
+                    height="24"
+                    xmlns="http://www.w3.org/2000/svg">
                     <use href="#icon-edit"></use>
                   </svg>
                   <input
@@ -157,13 +177,28 @@
                   </datalist>
                 </div>
                 <div class="form__row">
-                  <svg class="form__addon form__addon_left" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    class="form__addon form__addon_left"
+                    width="24"
+                    height="24"
+                    xmlns="http://www.w3.org/2000/svg">
                     <use href="#icon-datepicker"></use>
                   </svg>
                   <label for="datepicker" class="visually-hidden">Date</label>
-                  <input class="search__input input input_addon" type="date" name="date" id="datepicker" placeholder="Date" />
-                  <button class="button button_icon form__addon form__addon_right" id="button-reset">
-                    <svg class="button__icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                  <input
+                    class="search__input input input_addon"
+                    type="date"
+                    name="date"
+                    id="datepicker"
+                    placeholder="Date" />
+                  <button
+                    class="button button_icon form__addon form__addon_right"
+                    id="button-reset">
+                    <svg
+                      class="button__icon"
+                      width="24"
+                      height="24"
+                      xmlns="http://www.w3.org/2000/svg">
                       <use href="#icon-close"></use>
                     </svg>
                   </button>
@@ -173,19 +208,40 @@
               <span class="search__form-error" id="search-form-error"></span>
               <div class="search__footer">
                 <label for="all">
-                  <input class="custom-radio" type="radio" name="sortBy" id="all" value="publishedAt" checked />
+                  <input
+                    class="custom-radio"
+                    type="radio"
+                    name="sortBy"
+                    id="all"
+                    value="publishedAt"
+                    checked />
                   <span class="label">All</span>
                 </label>
                 <label for="popular">
-                  <input class="custom-radio" type="radio" name="sortBy" id="popular" value="popularity"/>
+                  <input
+                    class="custom-radio"
+                    type="radio"
+                    name="sortBy"
+                    id="popular"
+                    value="popularity" />
                   <span class="label">Popular</span>
                 </label>
                 <label for="relevancy">
-                  <input class="custom-radio" type="radio" name="sortBy" id="relevancy" value="relevancy"/>
+                  <input
+                    class="custom-radio"
+                    type="radio"
+                    name="sortBy"
+                    id="relevancy"
+                    value="relevancy" />
                   <span class="label">Relevancy</span>
                 </label>
                 <label for="newest">
-                  <input class="custom-radio" type="radio" name="sortBy" id="newest" value="publishedAt" />
+                  <input
+                    class="custom-radio"
+                    type="radio"
+                    name="sortBy"
+                    id="newest"
+                    value="publishedAt" />
                   <span class="label">Newest</span>
                 </label>
               </div>
@@ -402,6 +458,7 @@
                 </div>
               </div>
             </div>
+            <div class="section__loader"></div>
             <div class="section__divider" id="divider"></div>
           </div>
           <div class="section section_latest" id="latest">
@@ -412,17 +469,16 @@
                   <img class="image" src="/assets/images/img1.jpg" alt="" />
                 </div>
                 <div class="card__body">
-                    <span class="card__date">
-                      <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                        <use href="#icon-datepicker"></use>
-                      </svg>
-                      24 Oct, 2024
-                    </span>
+                  <span class="card__date">
+                    <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-datepicker"></use>
+                    </svg>
+                    24 Oct, 2024
+                  </span>
                   <h4 class="card__title">Hymn to the United Nations</h4>
                   <p class="card__description">
-                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let
-                    music for peace Be the paradigm, For peace means to change At the right
-                    time...
+                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let music
+                    for peace Be the paradigm, For peace means to change At the right time...
                   </p>
                   <div class="card__footer">
                     <button class="card__link button button_link">
@@ -439,17 +495,16 @@
                   <img class="image" src="/assets/images/img1.jpg" alt="" />
                 </div>
                 <div class="card__body">
-                    <span class="card__date">
-                      <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                        <use href="#icon-datepicker"></use>
-                      </svg>
-                      24 Oct, 2024
-                    </span>
+                  <span class="card__date">
+                    <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-datepicker"></use>
+                    </svg>
+                    24 Oct, 2024
+                  </span>
                   <h4 class="card__title">Hymn to the United Nations</h4>
                   <p class="card__description">
-                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let
-                    music for peace Be the paradigm, For peace means to change At the right
-                    time...
+                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let music
+                    for peace Be the paradigm, For peace means to change At the right time...
                   </p>
                   <div class="card__footer">
                     <button class="card__link button button_link">
@@ -466,17 +521,16 @@
                   <img class="image" src="/assets/images/img1.jpg" alt="" />
                 </div>
                 <div class="card__body">
-                    <span class="card__date">
-                      <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                        <use href="#icon-datepicker"></use>
-                      </svg>
-                      24 Oct, 2024
-                    </span>
+                  <span class="card__date">
+                    <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-datepicker"></use>
+                    </svg>
+                    24 Oct, 2024
+                  </span>
                   <h4 class="card__title">Hymn to the United Nations</h4>
                   <p class="card__description">
-                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let
-                    music for peace Be the paradigm, For peace means to change At the right
-                    time...
+                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let music
+                    for peace Be the paradigm, For peace means to change At the right time...
                   </p>
                   <div class="card__footer">
                     <button class="card__link button button_link">
@@ -493,17 +547,16 @@
                   <img class="image" src="/assets/images/img1.jpg" alt="" />
                 </div>
                 <div class="card__body">
-                    <span class="card__date">
-                      <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                        <use href="#icon-datepicker"></use>
-                      </svg>
-                      24 Oct, 2024
-                    </span>
+                  <span class="card__date">
+                    <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-datepicker"></use>
+                    </svg>
+                    24 Oct, 2024
+                  </span>
                   <h4 class="card__title">Hymn to the United Nations</h4>
                   <p class="card__description">
-                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let
-                    music for peace Be the paradigm, For peace means to change At the right
-                    time...
+                    Get inspired by this revived W.H. Auden’s Hymn to the United Nations. "Let music
+                    for peace Be the paradigm, For peace means to change At the right time...
                   </p>
                   <div class="card__footer">
                     <button class="card__link button button_link">
@@ -522,7 +575,11 @@
       <footer class="footer">
         <p class="footer__copyright">
           Made with ❤️ by
-          <a class="footer__link" rel="noopener noreferrer" href="https://github.com/mmishoil/Newsify" target="_blank"
+          <a
+            class="footer__link"
+            rel="noopener noreferrer"
+            href="https://github.com/mmishoil/Newsify"
+            target="_blank"
             ><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
               <use href="#icon-github"></use></svg
             >Misha Zhyzhka</a

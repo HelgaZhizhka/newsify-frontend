@@ -1,6 +1,6 @@
 import flatpickr from 'flatpickr'
 import 'flatpickr/dist/flatpickr.min.css'
-const minDateFromAPI = "2022-01-01";
+const minDateFromAPI = '2022-01-01'
 
 const initFlatpickr = selector => {
   flatpickr(selector, {

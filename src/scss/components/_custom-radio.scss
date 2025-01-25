@@ -17,7 +17,6 @@
   }
 
   &:not(:checked) {
-
     & + .label {
       background-color: transparent;
       color: var(--color-text);

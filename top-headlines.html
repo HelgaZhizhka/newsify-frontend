@@ -70,7 +70,9 @@
           d="M12 2a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1m0 15a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0v-3a1 1 0 0 1 1-1m10-5a1 1 0 0 1-1 1h-3a1 1 0 1 1 0-2h3a1 1 0 0 1 1 1M7 12a1 1 0 0 1-1 1H3a1 1 0 1 1 0-2h3a1 1 0 0 1 1 1m12.071 7.071a1 1 0 0 1-1.414 0l-2.121-2.121a1 1 0 0 1 1.414-1.414l2.121 2.12a1 1 0 0 1 0 1.415M8.464 8.464a1 1 0 0 1-1.414 0L4.93 6.344a1 1 0 0 1 1.414-1.415L8.464 7.05a1 1 0 0 1 0 1.414M4.93 19.071a1 1 0 0 1 0-1.414l2.121-2.121a1 1 0 0 1 1.414 1.414l-2.12 2.121a1 1 0 0 1-1.415 0M15.536 8.464a1 1 0 0 1 0-1.414l2.12-2.121a1 1 0 1 1 1.415 1.414L16.95 8.464a1 1 0 0 1-1.414 0" />
       </symbol>
       <symbol id="icon-map" viewBox="0 0 24 24">
-        <path fill="currentColor" d="m2 5 7-3 6 3 6.303-2.701a.5.5 0 0 1 .697.46V19l-7 3-6-3-6.303 2.701a.5.5 0 0 1-.697-.46zm12.935 2.204-6-3L4 6.319v12.648l5.065-2.17 6 3L20 17.68V5.033z"/>
+        <path
+          fill="currentColor"
+          d="m2 5 7-3 6 3 6.303-2.701a.5.5 0 0 1 .697.46V19l-7 3-6-3-6.303 2.701a.5.5 0 0 1-.697-.46zm12.935 2.204-6-3L4 6.319v12.648l5.065-2.17 6 3L20 17.68V5.033z" />
       </symbol>
     </svg>
   </head>
@@ -123,11 +125,20 @@
             updates, sorted by popularity, and never miss the stories that matter most.
           </h2>
           <div class="search">
-            <form action="" name="searchTopHeadlinesForm" id="search-form" aria-label="Search news" role="search">
+            <form
+              action=""
+              name="searchTopHeadlinesForm"
+              id="search-form"
+              aria-label="Search news"
+              role="search">
               <div class="search__form form">
                 <div class="form__row">
                   <label for="search-input" class="visually-hidden">Date</label>
-                  <svg class="form__addon form__addon_left" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    class="form__addon form__addon_left"
+                    width="24"
+                    height="24"
+                    xmlns="http://www.w3.org/2000/svg">
                     <use href="#icon-edit"></use>
                   </svg>
                   <input
@@ -148,11 +159,18 @@
                   </datalist>
                 </div>
                 <div class="form__row">
-                  <svg class="form__addon form__addon_left" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    class="form__addon form__addon_left"
+                    width="24"
+                    height="24"
+                    xmlns="http://www.w3.org/2000/svg">
                     <use href="#icon-map"></use>
                   </svg>
                   <label for="search-country" class="visually-hidden">Country</label>
-                  <select class="search__input input input_addon" name="country" id="search-country">
+                  <select
+                    class="search__input input input_addon"
+                    name="country"
+                    id="search-country">
                     <option value="" disabled selected>Select Country</option>
                     <option value="Spain">Spain</option>
                     <option value="Bulgaria">Bulgaria</option>
@@ -160,8 +178,14 @@
                     <option value="Russia">Russia</option>
                     <option value="Ukraine">Ukraine</option>
                   </select>
-                  <button class="button button_icon form__addon form__addon_right" id="button-reset">
-                    <svg class="button__icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                  <button
+                    class="button button_icon form__addon form__addon_right"
+                    id="button-reset">
+                    <svg
+                      class="button__icon"
+                      width="24"
+                      height="24"
+                      xmlns="http://www.w3.org/2000/svg">
                       <use href="#icon-close"></use>
                     </svg>
                   </button>
@@ -171,31 +195,67 @@
               <span class="search__form-error" id="search-form-error"></span>
               <div class="search__footer">
                 <label for="all">
-                  <input class="custom-radio" type="radio" name="category" id="all" value="all" checked />
+                  <input
+                    class="custom-radio"
+                    type="radio"
+                    name="category"
+                    id="all"
+                    value="all"
+                    checked />
                   <span class="label">All</span>
                 </label>
                 <label for="business">
-                  <input class="custom-radio" type="radio" name="category" id="business" value="business" />
+                  <input
+                    class="custom-radio"
+                    type="radio"
+                    name="category"
+                    id="business"
+                    value="business" />
                   <span class="label">Business</span>
                 </label>
                 <label for="general">
-                  <input class="custom-radio" type="radio" name="category" id="general" value="general" />
+                  <input
+                    class="custom-radio"
+                    type="radio"
+                    name="category"
+                    id="general"
+                    value="general" />
                   <span class="label">General</span>
                 </label>
                 <label for="health">
-                  <input class="custom-radio" type="radio" name="category" id="health" value="health" />
+                  <input
+                    class="custom-radio"
+                    type="radio"
+                    name="category"
+                    id="health"
+                    value="health" />
                   <span class="label">Health</span>
                 </label>
                 <label for="technology">
-                  <input class="custom-radio" type="radio" name="category" id="technology" value="technology" />
+                  <input
+                    class="custom-radio"
+                    type="radio"
+                    name="category"
+                    id="technology"
+                    value="technology" />
                   <span class="label">Technology</span>
                 </label>
                 <label for="science">
-                  <input class="custom-radio" type="radio" name="category" id="science" value="science" />
+                  <input
+                    class="custom-radio"
+                    type="radio"
+                    name="category"
+                    id="science"
+                    value="science" />
                   <span class="label">Science</span>
                 </label>
                 <label for="sports">
-                  <input class="custom-radio" type="radio" name="category" id="sports" value="sports" />
+                  <input
+                    class="custom-radio"
+                    type="radio"
+                    name="category"
+                    id="sports"
+                    value="sports" />
                   <span class="label">Sports</span>
                 </label>
               </div>
@@ -412,6 +472,7 @@
                 </div>
               </div>
             </div>
+            <div class="section__loader"></div>
             <div class="section__divider" id="divider"></div>
           </div>
         </div>
@@ -419,7 +480,11 @@
       <footer class="footer">
         <p class="footer__copyright">
           Made with ❤️ by
-          <a class="footer__link" rel="noopener noreferrer"  href="https://github.com/mmishoil/Newsify" target="_blank"
+          <a
+            class="footer__link"
+            rel="noopener noreferrer"
+            href="https://github.com/mmishoil/Newsify"
+            target="_blank"
             ><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
               <use href="#icon-github"></use></svg
             >Misha Zhyzhka</a
