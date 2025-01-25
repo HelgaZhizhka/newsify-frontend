@@ -10,7 +10,7 @@ const handleFormSubmit = async (form, callback, onSuccess = null, page = 1) => {
     console.log('All articles have been loaded.');
     return;
   }
-
+  console.log(totalArticlesCount, loadedArticlesCount);
   let url = ''
   const submitButton = form.querySelector('[type="submit"]')
   const errorTextElement = form.querySelector('#search-form-error')
@@ -52,12 +52,12 @@ const handleFormSubmit = async (form, callback, onSuccess = null, page = 1) => {
   console.log('Form submission params:', params)
 
   try {
-    const result = await callback(params)
+    const result = await callback(params, url)
     const { articles, totalResults } = result
     loadedArticlesCount += articles.length
     totalArticlesCount = totalResults
     submitButton.disabled = false
-    if (onSuccess && result) onSuccess(result, url)
+    if (onSuccess && result) onSuccess(result)
     console.log('Form submission result:', result)
     errorTextElement.textContent = ''
   } catch (error) {
