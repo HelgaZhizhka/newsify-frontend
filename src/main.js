@@ -17,10 +17,30 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentPage = 1;
   let loading = false;
 
+  const initObserver = elem => {
+    console.log(elem);
+    const handleIntersection = async entries => {
+      if (entries[0].isIntersecting && !loading) {
+        loading = true;
+        currentPage += 1;
+        await handleSearchForm();
+        loading = false;
+      }
+    }
+
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
+    }
+    const observer = new IntersectionObserver(handleIntersection, options)
+    observer.observe(elem)
+  }
+
   const handleSearchForm = async () => {
     try {
       showLoader();
-      await handleFormSubmit(form, fetchNews, renderResults, currentPage);
+      await handleFormSubmit(form, fetchNews, renderResults, initObserver, currentPage);
       hideLoader();
     } catch (error) {
       console.error(error);
@@ -43,23 +63,5 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-  const divider = document.getElementById('divider')
-
-  const handleIntersection = async entries => {
-    if (entries[0].isIntersecting && !loading) {
-      loading = true;
-      currentPage += 1;
-      await handleSearchForm();
-      loading = false;
-    }
-  }
-
-  const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-  }
-  const observer = new IntersectionObserver(handleIntersection, options)
-  observer.observe(divider)
-
+  //const divider = document.getElementById('divider')
 })

@@ -1,7 +1,7 @@
 let loadedArticlesCount = 0
 let totalArticlesCount = 0
 
-const handleFormSubmit = async (form, callback, onSuccess = null, page = 1) => {
+const handleFormSubmit = async (form, callback, onSuccess = null, initObserver = null, page = 1) => {
 
   if (page === 1) {
     loadedArticlesCount = 0;
@@ -54,11 +54,13 @@ const handleFormSubmit = async (form, callback, onSuccess = null, page = 1) => {
   try {
     const result = await callback(params, url)
     const { articles, totalResults } = result
+    console.log('Form submission result:', result)
     loadedArticlesCount += articles.length
     totalArticlesCount = totalResults
     submitButton.disabled = false
     if (onSuccess && result) onSuccess(result)
-    console.log('Form submission result:', result)
+    const lastCard  = document.querySelector('.card:last-child');
+    //if(initObserver) initObserver(lastCard)
     errorTextElement.textContent = ''
   } catch (error) {
     console.error('Error:', error)

@@ -8,6 +8,10 @@ const renderResults = result => {
   }
 
   if (articles && articles.length > 0) {
+    const title = resultsContainer.querySelector('.section__title')
+    if(title) {
+      resultsContainer.removeChild(title)
+    }
     const cards = articles
       .map(
         article =>
