@@ -1,16 +1,15 @@
-let loadedArticlesCount = 0
-let totalArticlesCount = 0
+let isEnd = false
+const limit = 10;
 
 const handleFormSubmit = async (form, callback, onSuccess = null, initObserver = null, page = 1) => {
 
   if (page === 1) {
-    loadedArticlesCount = 0;
-    totalArticlesCount = 0;
-  } else if (loadedArticlesCount >= totalArticlesCount && totalArticlesCount > 0) {
+    isEnd = false
+  } else if (isEnd || page*limit > 100 ) {
     console.log('All articles have been loaded.');
     return;
   }
-  console.log(totalArticlesCount, loadedArticlesCount);
+
   let url = ''
   const submitButton = form.querySelector('[type="submit"]')
   const errorTextElement = form.querySelector('#search-form-error')
@@ -49,19 +48,17 @@ const handleFormSubmit = async (form, callback, onSuccess = null, initObserver =
 
   submitButton.disabled = true
 
-  console.log('Form submission params:', params)
-
   try {
     const result = await callback(params, url)
-    const { articles, totalResults } = result
-    console.log('Form submission result:', result)
-    loadedArticlesCount += articles.length
-    totalArticlesCount = totalResults
+    const { articles, terminate } = result
     submitButton.disabled = false
-    if (onSuccess && result) onSuccess(result)
-    const lastCard  = document.querySelector('.card:last-child');
-    //if(initObserver) initObserver(lastCard)
-    errorTextElement.textContent = ''
+    isEnd = terminate
+    if (!isEnd) {
+      if (onSuccess && result) onSuccess(result)
+      const lastCard  = document.querySelector('.card:last-child');
+      setTimeout(() => {if(initObserver) initObserver(lastCard)}, 100)
+      errorTextElement.textContent = ''
+    }
   } catch (error) {
     console.error('Error:', error)
     submitButton.disabled = false

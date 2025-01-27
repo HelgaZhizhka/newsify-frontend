@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5,
+      threshold: 0.75,
     }
     const observer = new IntersectionObserver(handleIntersection, options)
     observer.observe(elem)
@@ -50,7 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('submit', async event => {
     event.preventDefault();
-    await handleSearchForm();
+    try {
+      showLoader();
+      await handleFormSubmit(form, fetchNews, renderResults, initObserver, 1);
+      hideLoader();
+    } catch (error) {
+      console.error(error);
+      hideLoader();
+    }
   })
 
   if (radioButtons.length === 0) return
@@ -58,7 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
   radioButtons.forEach(radio => {
     radio.addEventListener('change', async () => {
       if (radio.checked) {
-        await handleSearchForm();
+        try {
+          showLoader();
+          await handleFormSubmit(form, fetchNews, renderResults, initObserver, 1);
+          hideLoader();
+        } catch (error) {
+          console.error(error);
+          hideLoader();
+        }
       }
     })
   })
