@@ -18,12 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let loading = false;
 
   const initObserver = elem => {
-    console.log(elem);
     const handleIntersection = async entries => {
       if (entries[0].isIntersecting && !loading) {
         loading = true;
         currentPage += 1;
-        await handleSearchForm();
+        await handleSearchForm(currentPage);
         loading = false;
       }
     }
@@ -37,10 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(elem)
   }
 
-  const handleSearchForm = async () => {
+  const handleSearchForm = async page => {
     try {
       showLoader();
-      await handleFormSubmit(form, fetchNews, renderResults, initObserver, currentPage);
+      await handleFormSubmit(form, fetchNews, renderResults, initObserver, page);
       hideLoader();
     } catch (error) {
       console.error(error);
@@ -50,14 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('submit', async event => {
     event.preventDefault();
-    try {
-      showLoader();
-      await handleFormSubmit(form, fetchNews, renderResults, initObserver, 1);
-      hideLoader();
-    } catch (error) {
-      console.error(error);
-      hideLoader();
-    }
+    handleSearchForm(1);
   })
 
   if (radioButtons.length === 0) return
@@ -65,17 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
   radioButtons.forEach(radio => {
     radio.addEventListener('change', async () => {
       if (radio.checked) {
-        try {
-          showLoader();
-          await handleFormSubmit(form, fetchNews, renderResults, initObserver, 1);
-          hideLoader();
-        } catch (error) {
-          console.error(error);
-          hideLoader();
-        }
+        handleSearchForm(1);
       }
     })
   })
-
-  //const divider = document.getElementById('divider')
 })

@@ -22,6 +22,7 @@
 
   &__input {
     margin-bottom: 1rem;
+    appearance: none;
 
     @media (min-width: 540px) {
       border: 0;

@@ -17,7 +17,7 @@ const renderResults = result => {
         article =>
           `<div class="card">
         <div class="card__image">
-          <img class="image" src="${article.urlToImage}" alt="" />
+          <img class="image" src="${article.urlToImage || 'static/news/assets/images/img1.jpg'}" alt="${article.title}" />
         </div>
         <div class="card__body">
           <span class="card__date">
