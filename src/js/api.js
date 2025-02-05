@@ -10,7 +10,6 @@ const getCookie = name => {
       }
     }
   }
-  console.log('cookie: ' + cookieValue)
   return cookieValue
 }
 
